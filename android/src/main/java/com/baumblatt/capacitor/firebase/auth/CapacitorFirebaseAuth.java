@@ -20,6 +20,7 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginConfig;
 import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.CapacitorPlugin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -32,9 +33,10 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.HashMap;
 import java.util.Map;
 
-@CapacitorPlugin(requestCodes = {
-        GoogleProviderHandler.RC_GOOGLE_SIGN_IN,
-        FacebookProviderHandler.RC_FACEBOOK_LOGIN
+@CapacitorPlugin()
+    permissions = {
+        @Permission(strings = GoogleProviderHandler.RC_GOOGLE_SIGN_IN),
+        @Permission(strings = FacebookProviderHandler.RC_FACEBOOK_LOGIN)
 })
 public class CapacitorFirebaseAuth extends Plugin {
     public static final String CONFIG_KEY_PREFIX = "plugins.CapacitorFirebaseAuth.";
