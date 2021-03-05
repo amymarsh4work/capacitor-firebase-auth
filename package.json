@@ -14,7 +14,7 @@
 	"author": "Bernardo Baumblatt",
 	"license": "MIT",
 	"dependencies": {
-		"@capacitor/core": "latest"
+		"@capacitor/core": "3.0.0-beta.6"
 	},
 	"devDependencies": {
 		"rimraf": "^3.0.0",
